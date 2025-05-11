@@ -15,8 +15,8 @@
     }
 
     .logo {
-      width: 200px;   /* increase this number as needed */
-      height: auto;   /* keeps proportions */
+      width: 200px;
+      height: auto;
       margin-bottom: 35px;
       display: block;
       margin-left: auto;
@@ -46,10 +46,14 @@
       border-radius: 5px;
     }
 
+    .centered-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     section {
       max-width: 650px;
       margin: 40px auto;
-      text-align: left;
     }
 
     section h3 {
@@ -58,7 +62,17 @@
     }
 
     section ul {
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    section ul li {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      text-align: center;
     }
 
     footer {
@@ -84,40 +98,42 @@
 </head>
 <body>
 
-  <img src="logo.png" alt="Vaire Logo" class="logo" />
-  <h1>VAIRE ANALYTICS</h1>
-  <h2>AI Parcel Auditing</h2>
+  <div class="centered-content">
+    <img src="logo.png" alt="Vaire Logo" class="logo" />
+    <h1>VAIRE ANALYTICS</h1>
+    <h2>AI Parcel Auditing</h2>
 
-  <h2>AI-Powered Parcel Auditing. <br> Built to Detect What Legacy Systems Miss.</h2>
-  <button>Request a Demo</button>
+    <h2>AI-Powered Parcel Auditing. <br> Built to Detect What Legacy Systems Miss.</h2>
+    <button>Request a Demo</button>
 
-  <section>
-    <h3>Modern Parcel Auditing That Doesn’t Miss</h3>
-    <ul>
-      <li>Automate your UPS, FedEx, and USPS invoice audits</li>
-      <li>Surface billing errors by zone, weight, or accessorial charges</li>
-      <li>Flag refund opportunities instantly</li>
-      <li>Get LLM-generated insight for every failed audit line</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Modern Parcel Auditing That Doesn’t Miss</h3>
+      <ul>
+        <li>Automate your UPS, FedEx, and USPS invoice audits</li>
+        <li>Surface billing errors by zone, weight, or accessorial charges</li>
+        <li>Flag refund opportunities instantly</li>
+        <li>Get LLM-generated insight for every failed audit line</li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>Why Vaire?</h3>
-    <p>Legacy providers run rule-based audits.<br><strong>We built a system that thinks.</strong></p>
-    <ul>
-      <li>Fast integration, no manual checks</li>
-      <li>Clean SQL logic for accuracy, GPT analysis for clarity</li>
-      <li>Designed by a former SpaceX Analyst</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Why Vaire?</h3>
+      <p>Legacy providers run rule-based audits.<br><strong>We built a system that thinks.</strong></p>
+      <ul>
+        <li>Fast integration, no manual checks</li>
+        <li>Clean SQL logic for accuracy, GPT analysis for clarity</li>
+        <li>Designed by a former SpaceX Analyst</li>
+      </ul>
+    </section>
 
-  <footer>
-    info@vaireanalytics.com
-    <div class="contact-links">
-      <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
-    </div>
-    <div>&copy; 2025 Vaire Analytics. All rights reserved.</div>
-  </footer>
+    <footer>
+      info@vaireanalytics.com
+      <div class="contact-links">
+        <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
+      </div>
+      <div>&copy; 2025 Vaire Analytics. All rights reserved.</div>
+    </footer>
+  </div>
 
 </body>
 </html>
