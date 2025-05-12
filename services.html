@@ -5,83 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services – Vaire Analytics</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #1e1e1e;
-      min-height: 100vh;
-    }
-
-    header, footer {
-      background-color: #2f353d;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .logo, .footer-logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img, .footer-logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .logo span, .footer-logo span {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      flex: 1;
-      padding: 100px 40px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <header>
     <div class="logo">
       <img src="logo.png" alt="Vaire Logo" />
-      <span>VAIRE ANALYTICS</span>
+      <div class="logo-text">
+        <span class="brand-name">VAIRE ANALYTICS</span>
+        <small class="tagline">Parcel Auditing | A.I Insights</small>
+      </div>
     </div>
     <nav>
       <a href="index.html">HOME</a>
@@ -92,11 +25,15 @@
   </header>
 
   <main>
-    <h1>Our Services</h1>
-    <p>
-      We offer automated parcel audits, shipping cost optimization, contract compliance reviews, and AI-generated insights. 
-      All designed to eliminate hidden fees and give you visibility across your parcel spend — with zero manual effort.
-    </p>
+    <div class="content">
+      <div class="text">
+        <strong>Our Services</strong>
+        <p>Multi Carrier Parcel Auditing</p>
+        <p>Supply Chain Analytics</p>
+        <p>Chargeback & Dispute Support</p>
+        <p>Custom GPT-Powered Reporting</p>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -105,6 +42,5 @@
       <span>VAIRE</span>
     </div>
   </footer>
-
 </body>
 </html>

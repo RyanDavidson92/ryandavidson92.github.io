@@ -1,0 +1,168 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #1e1e1e;
+  }
+  
+  /* Flex structure for sticky footer */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    padding: 80px 40px;
+    animation: fadeIn 0.6s ease;
+    background-color: #f0f0f0;
+  }
+  
+  /* Header and Footer */
+  header, footer {
+    background-color: #2f353d;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif; /* Ensure font applies */
+  }
+  
+  /* Logo + Text */
+  .logo, .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 60px;
+    margin-right: 12px;
+  }
+  
+  .footer-logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .brand-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .tagline {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #cccccc;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer-logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif; /* Force Orbitron here too */
+  }
+  
+  /* Navigation */
+  nav a {
+    color: #ffffffcc;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  nav a:hover {
+    color: white;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Content layout */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .text strong {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+  }
+  
+  .text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Optional: Dashboard image styling */
+  .dashboard img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .dashboard img:hover {
+    transform: scale(1.02);
+  }
+  
