@@ -166,3 +166,29 @@
     transform: scale(1.02);
   }
   
+
+  /* Ensure Orbitron applies to header and nav content */
+.logo-text, .brand-name, .tagline {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #cccccc;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Ensure nav links use Orbitron consistently */
+nav a {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
