@@ -2,26 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How It Works – Vaire Analytics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="vaire-favicon.png">
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
       min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #1e1e1e;
       display: flex;
       flex-direction: column;
     }
-
-    header, footer {
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 40px; /* Reduced padding to prevent scroll bar */
+      flex-direction: row;
+    }
+    .text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #1e1e1e;
+    }
+    .image {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    footer {
       background-color: #2f353d;
       color: white;
       padding: 20px 40px;
@@ -30,141 +61,70 @@
       justify-content: space-between;
       font-family: 'Orbitron', sans-serif;
     }
-
-    header a {
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .logo, .footer-logo {
+    .footer-logo {
       display: flex;
       align-items: center;
     }
-
-    .logo img, .footer-logo img {
-      height: 40px;
+    .footer-logo img {
+      height: 30px;
       margin-right: 10px;
     }
-
-    .logo-text, .brand-name, .tagline {
-      font-family: 'Orbitron', sans-serif;
-      color: white;
-    }
-
-    .brand-name {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .tagline {
-      font-size: 0.8rem;
-      font-weight: 300;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 40px;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .text {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
-    }
-
-    .text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .text p {
+    .footer-logo span {
       font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .image {
-      flex: 1;
-      min-width: 300px;
-      max-width: 600px;
-    }
-
-    .image img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    footer div {
-      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-family: 'Orbitron', sans-serif;
     }
   </style>
 </head>
 <body>
-
+  <div class="page-wrapper">
     <header>
-        <div class="logo">
-          <img src="logo.png" alt="Vaire Logo">
-          <div class="logo-text">
-            <span class="brand-name">VAIRE ANALYTICS</span>
-            <span class="tagline">Parcel Auditing | A.I Insights</span>
-          </div>
+      <div class="logo">
+        <img src="logo.png" alt="Vaire Logo" />
+        <div class="logo-text">
+          <span class="brand-name">VAIRE ANALYTICS</span>
+          <span class="tagline">Parcel Auditing | A.I Insights</span>
         </div>
-        <nav>
-          <a href="index.html">HOME</a>
-          <a href="about.html">ABOUT</a>
-          <a href="how-it-works.html">HOW IT WORKS</a>
-          <a href="services.html">SERVICES</a>
-          <a href="contact.html">CONTACT</a>
-        </nav>
-      </header>
-      
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+        <a href="services.html">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
 
-  <main>
-    <div class="text">
-      <h1>How It Works</h1>
-      <p>
-        Our process is simple: You securely upload your parcel shipping data via SFTP (Or via API Integration) and send us your carrier contract information. 
-        We run this data through our proprietary Vaire Rating & GPT Analysis Engine, which automatically audits, rates, and interprets your shipments. 
-        You receive clean, accurate audit results with actionable insights — delivered via Power BI dashboards or directly by email.
-      </p>
+    <main class="content">
+      <div class="text">
+        <h1>How It Works</h1>
+        <p>
+          Our process is simple: You securely upload your parcel shipping data via SFTP (or via API Integration) and send us your carrier contract information.
+          We run this data through our proprietary Vaire Rating & GPT Analysis Engine, which automatically audits, rates, and interprets your shipments.
+          You receive clean, accurate audit results with actionable insights — delivered via Power BI dashboards or directly by email.
+        </p>
 
-      <h1>How we help your bottom line</h1>
-      <p>
-        By having access to our systems, you will know exactly how much you were overcharged and the power to recover funds from UPS & FedEx.
-      </p>
-    </div>
-    <div class="image">
-      <img src="flowdiagram.png" alt="Parcel Audit Flowchart">
-    </div>
-  </main>
+        <h1>How we help your bottom line</h1>
+        <p>
+          By having access to our systems, you will know exactly how much you were overcharged and the power to recover funds from UPS & FedEx.
+        </p>
+      </div>
+      <div class="image">
+        <img src="flowdiagram.png" alt="Parcel Audit Flowchart">
+      </div>
+    </main>
 
-  <footer>
-    <div class="footer-logo">
-      <img src="logo.png" alt="Vaire Logo small" />
-      <span>VAIRE Analytics</span>
-    </div>
-    <div style="text-align: right; font-size: 0.85rem;">
-      <div>© 2025 Vaire Analytics. All rights reserved.</div>
-      <div>Vaire Analytics™ is a registered trade name. Unauthorized use prohibited.</div>
-    </div>
-  </footer>
-
+    <footer>
+      <div class="footer-logo">
+        <img src="logo.png" alt="Vaire Logo small" />
+        <span>VAIRE ANALYTICS</span>
+      </div>
+      <div>
+        <div>© 2025 Vaire Analytics. All rights reserved.</div>
+        <div>Vaire Analytics™ is a registered trade name. Unauthorized use prohibited.</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

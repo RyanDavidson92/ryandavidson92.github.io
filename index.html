@@ -2,262 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaire Analytics – AI Parcel Auditing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="vaire-favicon.png">
-<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-<link rel="icon" type="image/png" href="vaire-favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="vaire-favicon.png">
-
-
-<!-- Apple Touch Icon (iPhones/iPads) -->
-<link rel="apple-touch-icon" href="/favicon.png">
-
-<!-- Android & Other High-Res Devices -->
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
-
-<!-- Fallback for Older Browsers -->
-<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #1e1e1e;
-    }
-  
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      transition: background 0.4s ease;
-    }
-  
-    header {
-      background: linear-gradient(to right, #2f353d, #1e242b);
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'Orbitron', sans-serif;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s ease;
-    }
-  
-    .logo {
-      display: flex;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-  
-    .logo:hover {
-      transform: scale(1.05);
-    }
-  
-    .logo img {
-      height: 60px;
-      margin-right: 12px;
-    }
-  
-    .logo span {
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-  
-    nav a {
-      color: #ffffffcc;
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-  
-    nav a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: orange;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
-  
-    nav a:hover {
-      color: white;
-    }
-  
-    nav a:hover::after {
-      width: 100%;
-    }
-  
-    main {
-      flex: 1;
-      padding: 80px 40px;
-      background-color: #f0f0f0;
-      animation: fadeIn 0.6s ease;
-    }
-  
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  
     .content {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
+      flex-direction: row;
+      padding: 80px 40px;
     }
-  
     .dashboard {
       flex: 1;
-      min-width: 320px;
+      min-width: 300px;
       max-width: 600px;
-      margin-bottom: 30px;
     }
-  
     .dashboard img {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
     }
-  
-    .dashboard img:hover {
-      transform: scale(1.02);
-    }
-  
     .text {
       flex: 1;
-      padding: 20px 40px;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #333;
-      min-width: 320px;
-      transition: all 0.3s ease;
+      min-width: 300px;
+      max-width: 500px;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
-  
     .text strong {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       display: block;
       margin-bottom: 20px;
       color: #1e1e1e;
     }
-  
-    .text em {
-      font-style: italic;
-      color: #555;
-    }
-  
-    footer {
-      background: #1e242b;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'Orbitron', sans-serif;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
-      transition: background 0.3s ease;
-    }
-  
-    .footer-logo {
-      display: flex;
-      align-items: center;
-    }
-  
-    .footer-logo img {
-      height: 30px;
-      margin-right: 10px;
-    }
-  
-    .footer-logo span {
-      font-size: 1.2rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      color: white;
-    }
-    
-    .brand-name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    
-    .tagline {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: #cccccc;
-      margin-top: 4px;
-      letter-spacing: 0.5px;
-    }
-    
   </style>
-  
-  
 </head>
 <body>
-
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Vaire Logo" />
-      <div class="logo-text">
-        <span class="brand-name">VAIRE ANALYTICS</span>
-        <small class="tagline">Parcel Auditing | A.I Insights</small>
+  <div class="page-wrapper">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Vaire Logo" />
+        <div class="logo-text">
+          <span class="brand-name">VAIRE ANALYTICS</span>
+          <span class="tagline">Parcel Auditing | A.I Insights</span>
+        </div>
       </div>
-    </div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="how-it-works.html">HOW IT WORKS</a>
-      <a href="services.html">SERVICES</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </header>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+        <a href="services.html">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
 
-  <main>
-    <div class="content">
-      <div class="dashboard">
-        <img src="dashboard.png" alt="Dashboard Preview" />
-      </div>
+    <main class="content">
       <div class="text">
-        <strong>AI Parcel Auditing</strong>
+        <strong>Parcel Auditing with A.I Insight</strong>
         <p>We uncover how much you were overcharged and why.</p>
         <p><strong>Why Vaire?</strong></p>
         <p><em>Our Mission:</em> To uncover hidden parcel fees.</p>
-        <p>Legacy providers run rule-based audits.<br/>
-        We built a system that thinks.</p>
-        <p>⚡ Fast integration, no manual checks<br/>
-        🧠 Clean SQL logic for accuracy, GPT analysis for clarity<br/>
-        🚀 Designed by SpaceX Alumni</p>
+        <p>Legacy providers run rule-based audits.<br/>We built a system that thinks.</p>
+        <p>Fast integration<br/>Clean SQL logic for accuracy, GPT analysis for clarity<br/>Designed by SpaceX Alumni</p>
       </div>
-    </div>
-  </main>
+      <div class="dashboard">
+        <img src="dashboard.png" alt="Dashboard Preview" />
+      </div>
+    </main>
 
-  <footer>
-    <div class="footer-logo">
-      <img src="logo.png" alt="Vaire Logo small" />
-      <span>VAIRE Analytics</span>
-    </div>
-    <div style="text-align: right; font-size: 0.85rem;">
-      <div>© 2025 Vaire Analytics. All rights reserved.</div>
-      <div>Vaire Analytics™ is a registered trade name. Unauthorized use prohibited.</div>
-    </div>
-  </footer>
+    <footer>
+      <div class="footer-logo">
+        <img src="logo.png" alt="Vaire Logo small" />
+        <span>VAIRE ANALYTICS</span>
+      </div>
+      <div>
+        <div>© 2025 Vaire Analytics. All rights reserved.</div>
+        <div>Vaire Analytics™ is a registered trade name. Unauthorized use prohibited.</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
