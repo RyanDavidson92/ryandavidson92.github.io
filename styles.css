@@ -233,3 +233,25 @@ html {
     font-size: 1.5rem;
   }
 }
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
