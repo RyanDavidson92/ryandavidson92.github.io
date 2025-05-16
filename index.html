@@ -77,16 +77,15 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-logo">
-        <img src="logo.png" alt="Vaire Logo small" />
-        <span>VAIRE ANALYTICS</span>
-      </div>
-      <div>
-        <div>© 2025 Vaire Analytics. All rights reserved.</div>
-        <div>Vaire Analytics™ is a registered trade name. Unauthorized use prohibited.</div>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
   </div>
 </body>
 </html>
