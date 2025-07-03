@@ -61,9 +61,16 @@
       display: flex;
       justify-content: center;
     }
-
+    .audit-snippet-small {
+      max-width: 700px;
+      width: 100%;
+      height: auto;
+      margin-top: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
     @media (max-width: 768px) {
-      .audit-snippet {
+      .audit-snippet-small {
         max-width: 90%;
         margin-top: 2rem;
       }
@@ -106,8 +113,11 @@
             <li>Clean SQL logic for accuracy, GPT analysis for clarity</li>
             <li>Designed by SpaceX Alumni</li>
           </ul>
-    
-          <img src="audit.png" alt="Audit Preview" class="audit-snippet" />
+          
+           <!-- Wrap the image in a center wrapper -->
+          <div class="center-wrapper">
+            <img src="audit.png" alt="Audit Preview" class="audit-snippet" />
+          </div>
 <div class="center-wrapper">
   <img src="ai-review.png" alt="AI Preview" class="audit-snippet large-snippet" />
 </div>
