@@ -45,6 +45,7 @@
 
     .audit-snippet {
       border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 1200px; /* changed from 9000px */
       height: auto;
@@ -72,14 +73,15 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     /* ✅ Fix for mobile only */
-    @media (max-width: 1200px) {
-      .large-snippet {
-        width: 96%;         /* scale larger than the screen */
+    @media (max-width: 768px) {
+      img[src="ai-review.png"] {
+        min-width: 1200px;
         max-width: none;
-        margin-top: 2rem;
+        height: auto;
       }
+    
       .center-wrapper {
-        overflow-x: auto;    /* allow horizontal scrolling if needed */
+        overflow-x: auto;
       }
     }
 
