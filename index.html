@@ -75,12 +75,17 @@
     /* ✅ Fix for mobile only */
     @media (max-width: 768px) {
       .large-snippet {
-        width: 96%;         /* scale larger than the screen */
+        width: auto;
+        height: auto;
         max-width: none;
+        min-width: 1200px;        /* Force it to be wider */
         margin-top: 2rem;
+        display: block;
       }
+    
       .center-wrapper {
-        overflow-x: auto;    /* allow horizontal scrolling if needed */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
     }
 
