@@ -75,9 +75,12 @@
     /* ✅ Fix for mobile only */
     @media (max-width: 768px) {
       .large-snippet {
-        width: 100%;
+        width: 120%;         /* scale larger than the screen */
         max-width: none;
         margin-top: 2rem;
+      }
+      .center-wrapper {
+        overflow-x: auto;    /* allow horizontal scrolling if needed */
       }
     }
 
